@@ -31,23 +31,22 @@
 <div class="container mt-3">
     <table class="table">
         <thead>
-        <tr>
-            <th>상품번호</th>
-            <th>상품명</th>
-            <th>상품가격</th>
-            <th>상품재고</th>
-        </tr>
+            <tr>
+                <th>상품번호</th>
+                <th>상품명</th>
+                <th>상품가격</th>
+                <th>상품재고</th>
+            </tr>
         </thead>
         <tbody>
-        <c:forEach var="p" items="${productlist}">
-            <tr>
-                <td>${p.id}</td>
-                <td>${p.name}</td>
-                <td>${p.price}원</td>
-                <td>${p.qty}개</td>
-            </tr>
-        </c:forEach>
-
+            <c:forEach var="p" items="${productList}">
+                <tr>
+                    <td>${p.id}</td>
+                    <td><a href="/product/${p.id}">${p.name}</a></td>
+                    <td>${p.price}원</td>
+                    <td>${p.qty}개</td>
+                </tr>
+            </c:forEach>
         </tbody>
     </table>
 </div>

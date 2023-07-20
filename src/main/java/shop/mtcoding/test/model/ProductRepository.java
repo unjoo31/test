@@ -28,4 +28,27 @@ public class ProductRepository {
         List<Product> productList = query.getResultList();
         return productList;
     }
+
+    public Product findById(int id){
+        Query query = em.createNativeQuery("select * from product_tb where id = :id", Product.class);
+        query.setParameter("id", id);
+        Product product = (Product) query.getSingleResult();
+        return product;
+    }
+
+    @Transactional
+    public void deleteById(int id){
+        Query query = em.createNativeQuery("delete from product_tb where id = :id");
+        query.setParameter("id", id);
+        query.executeUpdate();
+    }
+
+    @Transactional
+    public void update(String name, int price, int qty){
+        Query query = em.createNativeQuery("update product_tb set price = :price, qty = :qty where name = :name");
+        query.setParameter("name", name);
+        query.setParameter("price", price);
+        query.setParameter("qty", qty);
+        query.executeUpdate();
+    }
 }
