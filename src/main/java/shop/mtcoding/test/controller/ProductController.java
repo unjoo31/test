@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import shop.mtcoding.test.model.Product;
 import shop.mtcoding.test.model.ProductRepository;
+import shop.mtcoding.test.model.SellerRepository;
 
 import javax.persistence.*;
 import javax.servlet.http.HttpServletRequest;

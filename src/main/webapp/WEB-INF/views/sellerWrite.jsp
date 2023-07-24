@@ -34,17 +34,14 @@
     </div>
 </nav>
 <div class="container mt-3">
-    <form action="/product" method="post" enctype="application/x-www-form-urlencoded">
+    <form action="/seller/writer" method="post" enctype="application/x-www-form-urlencoded">
         <div class="mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="Enter 상품명" value="바나나" name="name">
+            <input type="text" class="form-control" placeholder="Enter 판매자 이름" value="언주" name="name">
         </div>
         <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Enter 상품가격" value="1000" name="price">
+            <input type="text" class="form-control" placeholder="Enter 판매자 이메일" value="unjoo@nate.com" name="email">
         </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Enter 상품재고" value="50" name="qty">
-        </div>
-        <button type="submit" class="btn btn-primary">상품등록</button>
+        <button type="submit" class="btn btn-primary">판매자등록</button>
     </form>
 </div>
 

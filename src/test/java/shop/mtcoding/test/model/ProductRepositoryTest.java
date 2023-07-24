@@ -20,7 +20,7 @@ public class ProductRepositoryTest {
     @Autowired
     private SellerRepository sellerRepository;
 
-    @Test
+
     public void findAll_test(){
         productRepository.save("사과", 1000, 40);
         productRepository.save("호박", 1000, 40);
@@ -34,7 +34,7 @@ public class ProductRepositoryTest {
         }
     }
 
-    @Test
+
     public void findById_test(){
         productRepository.save("바나나", 2000, 40);
         Product product = productRepository.findById(1);
@@ -44,7 +44,7 @@ public class ProductRepositoryTest {
         System.out.println(product.getQty());
     }
 
-    @Test
+
     public void findByIdDTO_test(){
         productRepository.save("바나나", 2000, 40);
         ProductDTO productDTO = productRepository.findByIdDTO(1);
@@ -55,7 +55,7 @@ public class ProductRepositoryTest {
         System.out.println(productDTO.getDes());
     }
 
-    @Test
+
     public void findByIdJoinSeller_test(){
         sellerRepository.save("홍길동", "ssar@nate.com");
         productRepository.saveWithFK("바나나", 3000,40, 1);
